@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+  <!-- Site made with Mobirise Website Builder v5.9.17, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.17, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="../static/assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="Learn yoga through pose detection in camera frame and explore resources and their benefits.">
+  
+  
+  <title>Yoga Pose Detection</title>
+  <link rel="stylesheet" href="../static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../static/assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="../static/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="../static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="../static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="../static/assets/mobirise/css/mbr-additional.css?v=RIBRyS"><link rel="stylesheet" href="../static/assets/mobirise/css/mbr-additional.css?v=RIBRyS" type="text/css">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+  
+</head>
+<style>
+.navbar {
+  margin-bottom: 0; /* Adjust the margin to remove the extra white space at the bottom */
+  border-radius: 0;
+}
+
+/* Popup form styles */
+#popup {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    background-color: hsla(0, 0%, 100%, 0);
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    z-index: 9999; /* Ensure the popup appears above other elements */
+    }
+
+/* ----------------------------------------- join now form--------------------------------------------------- */
+.parent-wrapper {
+  position: relative;
+  width: 400px;
+  height: 270px;
+  margin: 40px auto 0;
+  background-image: url('http://www.imgbase.info/images/safe-wallpapers/digital_art/1_miscellaneous_digital_art/41750_1_miscellaneous_digital_art_simple_dark_shapes.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -600%;
+  background-color: #000;
+  border-radius: 4px;
+  color: #FFF;
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  margin: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.subscribe-wrapper {
+  position: absolute;
+  left: -30px;
+  right: -30px;
+  height: 200px;
+  padding: 30px;
+  background-image: url('../static/MRjF1PL.png');
+  background-position-x: 272%;
+  background-position-y: -1px;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe-wrapper:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 71px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #7149c7;
+}
+
+.subscribe-wrapper h4 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 28px;
+}
+
+.subscribe-wrapper input {
+  position: absolute;
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 65%;
+  background: transparent;
+  transition: all .25s ease;
+}
+
+.subscribe-wrapper input:focus {
+  outline: none;
+  border-bottom: 1px solid #a77cf4;
+}
+
+.subscribe-wrapper .submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #a77cf4;
+  color: #FFF;
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  right: -10px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
+}
+
+.subscribe-wrapper .submit-btn:hover {
+  background-color: #8e62dc;
+}
+
+
+	
+	:root {
+		--bg-color: #000000;
+		--text-color: #fff;
+	}
+	
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 2rem 9%;
+		background: var(--bg-color);
+	}
+	
+	.footer-text p {
+		font-size: 1.6rem;
+		color: var(--text-color);
+	}
+</style>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ url_for('index')}}">Pose perfection</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('index')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('pose_detection')}}">Start Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('contact')}}" tabindex="-1" >Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-right show-popup" >Join</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+<section data-bs-version="5.1" class="header18 cid-u7sBuO2S6V mbr-fullscreen mbr-parallax-background" id="hero-16-u7sBuO2S6V">
+  <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-12">
+        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
+          <strong>Yoga Magic</strong>
+        </h1>
+        
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Unlock the Power of Yoga Pose Detection for Perfect Poses Every Time!</p>
+        <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="{{ url_for('pose_detection')}}">Get Started</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="header14 cid-u7sBuO2T2X" id="call-to-action-9-u7sBuO2T2X">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="card col-12 col-md-12 col-lg-10">
+				<div class="card-wrapper">
+					<div class="card-box align-center">
+						<h1 class="card-title mbr-fonts-style mb-4 display-1">
+							<strong>Master Yoga Poses with Precision</strong>
+						</h1>
+						<p class="mbr-text mbr-fonts-style mb-4 display-7">Experience Real-Time Pose Detection for Flawless Yoga Practice!</p>
+						<div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="{{ url_for('pose_detection')}}">Explore Now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="image08 cid-u7sBuO3IhS" id="image-12-u7sBuO3IhS">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="col-12 col-md-12">
+          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+            <strong>Pose Detection Revolution</strong>
+          </h5>
+          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">Embrace the Future of Yoga Learning with Cutting-Edge Pose Detection Technology!</h6>
+          
+        </div>
+      </div>
+      <div class="col-lg-8 side-features">
+        <div class="image-wrapper mb-4">
+          <img class="w-100" src="../static/assets/images/photo-1552196527-bffef41ef674.webp" alt="Mobirise Website Builder">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="article4 cid-u7sBuO3u2o" id="about-us-4-u7sBuO3u2o">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
+				<img class="w-100" src="../static/assets/images/photo-1510894347713-fc3ed6fdf539.webp" alt="Mobirise Website Builder">
+			</div>
+			<div class="col-12 col-md-12 col-lg">
+				<div class="text-wrapper align-left">
+					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+						<strong>Meet Our Creators</strong>
+					</h1>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">Embark on a journey with our visionary creators who brought YogaSense to life.</p>
+
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">Discover the brains behind the innovative pose detection technology that's changing the yoga game.</p>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">Get to know the passionate souls who are dedicated to revolutionizing the way you experience yoga practice.</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="features017 mbr-embla cid-u7sBuO41Et" id="features-17-u7sBuO41Et">   
+    <div class="position-relative">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 content-head">
+                    <div class="mbr-section-head mb-5">
+                        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                            <strong>Real-Time Pose Detection</strong>
+                        </h4>
+                        <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Experience the magic of yoga through your camera frame!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-auto-play-interval="5" data-draggable="true">
+            <div class="embla__viewport container-fluid">
+                <div class="embla__container">
+                    <div class="embla__slide slider-image item active" style="margin-left: 1rem; margin-right: 1rem;">
+                        <div class="slide-content">
+                            <div class="item-img">
+                                <div class="item-wrapper">
+                                    <img src="../static/assets/images/photo-1474557157379-8aa74a6ef541.webp" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">
+                                    <strong>Detailed Instructions</strong>
+                                </h5>
+                                
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Step-by-step guidance for perfect poses.</p>
+                            </div>
+
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="{{ url_for('pose_detection')}}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                        <div class="slide-content">
+                            <div class="item-img">
+                                <div class="item-wrapper">
+                                    <img src="../static/assets/images/photo-1549576490-b0b4831ef60a.webp" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">
+                                    <strong>Benefits Galore</strong>
+                                </h5>
+                                
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Discover the amazing benefits of each pose.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="{{ url_for('pose_detection')}}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                        <div class="slide-content">
+                            <div class="item-img">
+                                <div class="item-wrapper">
+                                    <img src="../static/assets/images/photo-1532798442725-41036acc7489.webp" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">
+                                    <strong>All Levels</strong>
+                                </h5>
+                                
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Poses suitable for beginners to experts.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="{{ url_for('pose_detection')}}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                        <div class="slide-content">
+                            <div class="item-img">
+                                <div class="item-wrapper">
+                                    <img src="../static/assets/images/photo-1588783344727-f67e17b45dfc.webp" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4">
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">
+                                    <strong>Personalized Feedback</strong>
+                                </h5>
+                                
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Receive tailored tips for pose improvement.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="{{ url_for('pose_detection')}}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                        <div class="slide-content">
+                            <div class="item-img">
+                                <div class="item-wrapper">
+                                    <img src="../static/assets/images/photo-1552196563-55cd4e45efb3.webp" alt="Mobirise Website Builder" title="" data-slide-to="5" data-bs-slide-to="5">
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">
+                                    <strong>Comprehensive Library</strong>
+                                </h5>
+                                
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Explore a vast collection of yoga poses.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="{{ url_for('pose_detection')}}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="embla__button embla__button--prev">
+                <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden visually-hidden">Previous</span>
+            </button>
+            <button class="embla__button embla__button--next">
+                <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
+                <span class="sr-only visually-hidden visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="gallery07 cid-u7sBuO4OFE" id="gallery-16-u7sBuO4OFE">
+  <div class="container-fluid gallery-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-12 content-head">
+        <div class="mbr-section-head mb-5">
+          <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>Pose Library for All</strong>
+          </h4>
+          
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-container-3 moving-left" style="transform: translate3d(-200px, 0px, 0px);">
+        <div class="grid-item">
+          <img src="../static/assets/images/photo-1538240175502-ec4eb4455f34.webp" alt="Mobirise Website Builder">
+        </div>
+        <div class="grid-item">
+          <img src="../static/assets/images/photo-1489659639091-8b687bc4386e.webp" alt="Mobirise Website Builder">
+        </div>
+        <div class="grid-item">
+          <img src="../static/assets/images/photo-1482100199117-a4a38a64e7e3.webp" alt="Mobirise Website Builder">
+        </div>
+        <div class="grid-item">
+          <img src="../static/assets/images/photo-1510894347713-fc3ed6fdf539.webp" alt="Mobirise Website Builder">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="list1 cid-u7sBuO5OXf" id="faq-1-u7sBuO5OXf">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-lg-10 m-auto">
+                <div class="content">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-12 content-head">
+                            <div class="mbr-section-head">
+                                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                                    <strong>Curious Minds Ask</strong>
+                                </h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bootstrap-accordion_11" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_11" aria-expanded="false" aria-controls="collapse1">
+                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">How does pose detection work?</h6>
+                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse1_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_11">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">Our pose detection algorithm analyzes your movements to guide you into the perfect yoga posture.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_11" aria-expanded="false" aria-controls="collapse2">
+                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Can anyone use this technology?</h6>
+                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse2_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_11">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">Absolutely! Whether you're a beginner or a seasoned yogi, our pose detection is here to elevate your practice.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_11" aria-expanded="false" aria-controls="collapse3">
+                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Is it accurate and reliable?</h6>
+                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse3_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_11">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">You bet! Our advanced technology ensures precise detection for a seamless yoga experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_11" aria-expanded="false" aria-controls="collapse4">
+                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">What if I need help with a pose?</h6>
+                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse4_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_11">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">No worries! Connect with our support team for personalized assistance anytime you need it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_11" aria-expanded="false" aria-controls="collapse5">
+                                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">How can I get started today?</h6>
+                                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse5_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_11">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">Simply grab your mat, strike a pose, and let our pose detection technology transform your yoga journey.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="gallery09 cid-u7sBuO6X27" id="gallery-9-u7sBuO6X27">
+   <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-12 col-lg-4 main-text">
+        <div class="">
+          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+            <strong>Pose Gallery</strong>
+          </h5>
+          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">Explore our captivating gallery showcasing the beauty of yoga poses captured through the lens of pose detection technology.</h6>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-8 side-features row">
+        <div class="item features-image col-12 col-md-6 col-lg-6 active">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="../static/assets/images/photo-1573384666979-2b1e160d2d08.webp" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
+            </div>
+            
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-6 active">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="../static/assets/images/photo-1545205597-3d9d02c29597.webp" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
+            </div>
+            
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-6 active">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="../static/assets/images/photo-1616699002805-0741e1e4a9c5.webp" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
+            </div>
+            
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-6 active">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="../static/assets/images/photo-1556816723-1ce827b9cfbb.webp" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-text">
+      <p>Copyright © 2024 Yoga Pose Detection | All Rights Reserved.</p>
+  </div>
+</footer> 
+
+
+<!-- Popup form -->
+<div id="popup">
+  <div class="parent-wrapper modal-box">
+      <span class="close-btn glyphicon glyphicon-remove"></span>
+      <div class="subscribe-wrapper">
+          <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+          <form action="/submit" method="post">
+              <input type="email" name="email" class="subscribe-input" placeholder="Your e-mail">
+              <div class="submit-btn submit-button">SUBMIT</div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+      // Close the popup initially
+      $('#popup').hide();
+      
+      // Show popup form when the "Join Now" button is clicked
+      $('.show-popup').click(function(event){
+          // Prevent default form submission behavior
+          event.preventDefault();
+          $('#popup').show();
+      });
+      
+      // Close the popup when close button is clicked
+      $('.close-btn').click(function(){
+          $('#popup').hide();
+      });
+      $('.submit-button').click(function(){
+          $('#popup').hide();
+      });
+  });
+</script>
+
+
+  <input name="animation" type="hidden">
+  </body>
+</html>
