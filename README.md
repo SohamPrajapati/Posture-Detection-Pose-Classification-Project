@@ -1,7 +1,3 @@
-# Posture-Detection-Pose-Classification-Project
-"Posture Detection &amp; Pose Classification Project:  Utilizing Python, Jupyter IDE, and libraries like Mediapipe and Matplotlib, this project detects and classifies human poses such as Tree Pose, T Pose, Warrior II, etc. Ideal for applications like fitness monitoring and gesture-based interfaces."
-
-
 # Posture Detection & Pose Classification Web Application
 
 This project is a posture detection and pose classification web application developed using Python, Flask, and various libraries such as Mediapipe and Matplotlib. It utilizes machine learning algorithms to accurately detect and classify human poses, including poses like Tree Pose, T Pose, Warrior II, etc. This application is particularly useful for applications like fitness monitoring and gesture-based interfaces.
@@ -17,6 +13,7 @@ This project is a posture detection and pose classification web application deve
 ## Screenshots
 
 ![Screenshot 1](Screenshots/home-page.png)
+
 ![Screenshot 2](Screenshots/detection.png)
 
 ## Requirements
@@ -59,7 +56,6 @@ This project is a posture detection and pose classification web application deve
 3. Allow access to the webcam if prompted.
 
 4. Follow the instructions on the web interface to detect and classify human poses.
-- Jane Smith (@janesmith)
 
 ## License
 
