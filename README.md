@@ -17,14 +17,14 @@ This project is a posture detection and pose classification web application deve
 ## Screenshots
 
 ![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 2](screenshots/home-page.png)
 
 ## Requirements
 
-- Python 3.x
-- Flask
-- Mediapipe
-- Matplotlib
+- Flask==3.0.2
+- Mediapipe==0.10.5
+- opencv_contrib_python==4.8.1.78
+- opencv_python==4.8.1.78
 
 ## Installation
 
@@ -37,7 +37,7 @@ This project is a posture detection and pose classification web application deve
 2. Navigate to the project directory:
 
    ```bash
-   cd posture-detection-web-app
+   cd Posture-Detection-Pose-Classification-Project
    ```
 
 3. Install the required dependencies:
@@ -59,10 +59,6 @@ This project is a posture detection and pose classification web application deve
 3. Allow access to the webcam if prompted.
 
 4. Follow the instructions on the web interface to detect and classify human poses.
-
-## Contributors
-
-- John Doe (@johndoe)
 - Jane Smith (@janesmith)
 
 ## License
