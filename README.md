@@ -16,8 +16,8 @@ This project is a posture detection and pose classification web application deve
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/home-page.png)
+![Screenshot 1](Screenshots/home-page.png)
+![Screenshot 2](screenshots/detection.png)
 
 ## Requirements
 
