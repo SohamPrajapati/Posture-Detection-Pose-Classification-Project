@@ -18,10 +18,10 @@ This project is a posture detection and pose classification web application deve
 
 ## Requirements
 
-- Flask==3.0.2
-- Mediapipe==0.10.5
-- opencv_contrib_python==4.8.1.78
-- opencv_python==4.8.1.78
+- Flask
+- Mediapipe
+- opencv_contrib_python
+- opencv_python
 
 ## Installation
 
