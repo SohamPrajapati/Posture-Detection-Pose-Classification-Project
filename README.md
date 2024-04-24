@@ -1,4 +1,4 @@
-# Posture Detection & Pose Classification Web Application 
+# Posture Detection & Pose Classification Web Application
 
 This project is a posture detection and pose classification web application developed using Python, Flask, and various libraries such as Mediapipe and Matplotlib. It utilizes machine learning algorithms to accurately detect and classify human poses, including poses like Tree Pose, T Pose, Warrior II, etc. This application is particularly useful for applications like fitness monitoring and gesture-based interfaces.
 
